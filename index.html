@@ -69,14 +69,21 @@
       margin: 0 auto 60px auto;
     }
 
-    /* 確保圖片不會被切斷，並且讓連結變成區塊 */
+/* 確保圖片不會被切斷，並強制拉開上下間距 */
     .gallery a {
-      display: block;
+      display: inline-block; /* 換成 inline-block 可以防止間距被瀑布流吃掉 */
+      width: 100%;
       break-inside: avoid;
-      margin-bottom: 50px; /* 圖片上下的間距 */
-      text-decoration: none; /* 拿掉連結的底線 */
+      margin-bottom: 40px; /* 把上下間距明顯拉大，讓畫面有呼吸感 */
+      text-decoration: none; 
+      position: relative; /* 為了圖層高度做準備 */
     }
 
+/* 解決交疊問題：讓游標指到的圖片跑到最上層 */
+    .gallery a:hover {
+      z-index: 10; 
+    }
+    
     .gallery img {
       width: 100%;
       display: block;
@@ -129,8 +136,9 @@
     <p>I love capturing warm everyday moments and whimsical details in my art. I hope these little pieces can bring a touch of healing and joy to your day.</p>
     <a href="https://www.instagram.com/paipai_sesame/" target="_blank" class="ig-button">Follow @paipai_sesame</a>
   </div>
-  
-  <div class="gallery"> /*「先排滿第一條直行（由上往下），再排第二條直行」*/
+
+ /*「先排滿第一條直行（由上往下），再排第二條直行」*/  
+  <div class="gallery">
     <img src= 'lazy.png' alt="慵懶">
     <img src= 'ha.PNG' alt="萬聖節">
     <img src= 'ny.png' alt="新年">
