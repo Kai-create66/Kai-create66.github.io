@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawn For You | 溫暖插畫日常</title>
+  <style>
+    /* 這是設定網站整體風格的地方 */
+    body {
+      background-color: #FAF9F5; /* 微微的奶油紙張色，增加手帳溫度 */
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #4A4A4A;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      text-align: center;
+      padding: 80px 20px 40px 20px;
+    }
+    
+    h1 {
+      font-size: 2.5em;
+      letter-spacing: 3px;
+      color: #5D5D5D;
+      margin-bottom: 10px;
+    }
+    
+    p.subtitle {
+      color: #888;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+    }
+    
+    /* 這是作品集相片牆的排版 */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto 80px auto;
+    }
+    
+    /* 讓圖片有童趣圓角和質感陰影 */
+    .gallery img {
+      width: 100%;
+      border-radius: 16px; 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    
+    /* 滑鼠游標移過去時會微微浮起來的可愛特效 */
+    .gallery img:hover {
+      transform: translateY(-8px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Drawn For You</h1>
+    <p class="subtitle">溫暖日常 ‧ 質感插畫</p>
+  </header>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="可愛狗狗">
+    <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=600&q=80" alt="溫暖日常">
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80" alt="生活風格">
+  </div>
+
+</body>
+</html>
