@@ -60,28 +60,60 @@
       background-color: #C1A37E; /* 滑鼠移過去顏色會變深 */
     }
     
-    /* 這是作品集相片牆的排版 */
+/* 全新的瀑布流排版魔法 */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      column-count: 3; /* 電腦版顯示 3 排 */
+      column-gap: 30px; /* 圖片左右的間距 */
       padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto 80px auto;
+      max-width: 1100px;
+      margin: 0 auto 60px auto;
     }
-    
-    /* 讓圖片有童趣圓角和質感陰影 */
+
+    /* 確保圖片不會被切斷，並且讓連結變成區塊 */
+    .gallery a {
+      display: block;
+      break-inside: avoid;
+      margin-bottom: 30px; /* 圖片上下的間距 */
+      text-decoration: none; /* 拿掉連結的底線 */
+    }
+
     .gallery img {
       width: 100%;
-      border-radius: 16px; 
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
-      transition: transform 0.3s ease;
+      display: block;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
     }
-    
-    /* 滑鼠游標移過去時會微微浮起來的可愛特效 */
+
     .gallery img:hover {
       transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.1); /* 滑鼠移過去時陰影加深，更有立體感 */
+    }
+
+    /* 讓瀑布流在平板和手機上自動調整排數 */
+    @media (max-width: 768px) {
+      .gallery {
+        column-count: 2; /* 平板顯示 2 排 */
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery {
+        column-count: 1; /* 手機顯示 1 排 */
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+      font-size: 0.9em;
+      border-top: 1px solid #EAEAEA;
+    }
+    
+    footer a {
+      color: #D4B895;
+      text-decoration: none;
     }
   </style>
 </head>
