@@ -13,7 +13,8 @@
       margin: 0;
       padding: 0;
     }
-    
+
+/* 頂部標題區塊 */
     header {
       text-align: center;
       padding: 80px 20px 40px 20px;
@@ -30,6 +31,33 @@
       color: #888;
       font-size: 1.1em;
       letter-spacing: 1px;
+    }
+
+/* 自我介紹與社群按鈕區塊 */
+    .about-section {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 50px auto;
+      padding: 0 20px;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    /* 質感奶茶色按鈕設計 */
+    .ig-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background-color: #D4B895; 
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      letter-spacing: 1px;
+      transition: background-color 0.3s;
+    }
+
+    .ig-button:hover {
+      background-color: #C1A37E; /* 滑鼠移過去顏色會變深 */
     }
     
     /* 這是作品集相片牆的排版 */
@@ -64,11 +92,21 @@
     <p class="subtitle">Warm everyday moments</p>
   </header>
 
+  <div class="about-section">
+    <p>Hi, I'm Pai Pai. Welcome to my illustration diary.</p>
+    <p>I love capturing warm everyday moments and whimsical details in my art. I hope these little pieces can bring a touch of healing and joy to your day.</p>
+    <a href="https://www.instagram.com/paipai_sesame/" target="_blank" class="ig-button">Follow @paipai_sesame</a>
+  </div>
+  
   <div class="gallery">
     <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="可愛狗狗">
     <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=600&q=80" alt="溫暖日常">
     <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80" alt="生活風格">
   </div>
+
+  <footer>
+    <p>&copy; 2026 Drawn For You by <a href="https://www.instagram.com/paipai_sesame/" target="_blank">Pai Pai Sesame</a>. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
