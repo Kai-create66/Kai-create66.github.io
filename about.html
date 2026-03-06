@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Drawn For You</title>
+  <style>
+    /* 保持網站一致的奶油底色與字體 */
+    body {
+      background-color: #FAF9F5; 
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #4A4A4A;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 頂部導覽列 (與首頁一模一樣) */
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      background-color: rgba(250, 249, 245, 0.85); 
+      position: sticky; 
+      top: 0;
+      z-index: 100; 
+      backdrop-filter: blur(8px); 
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #888;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      font-size: 0.95em;
+      transition: color 0.3s;
+    }
+
+    .top-nav a:hover, .top-nav a.active {
+      color: #D4B895; 
+    }
+
+    @media (max-width: 480px) {
+      .top-nav { gap: 15px; font-size: 0.9em; padding: 15px; }
+    }
+
+    /* 專屬 About 頁面的質感名片設計 */
+    .about-container {
+      max-width: 600px;
+      margin: 60px auto 100px auto;
+      background-color: #FFFFFF;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    /* 如果你未來想放自己的頭像或代表性插畫，可以先保留這個設定 */
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #FAF9F5;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #5D5D5D;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    .ig-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      background-color: #D4B895; 
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      letter-spacing: 1px;
+      transition: background-color 0.3s;
+    }
+
+    .ig-button:hover {
+      background-color: #C1A37E; 
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+      font-size: 0.9em;
+      border-top: 1px solid #EAEAEA;
+    }
+    footer a { color: #D4B895; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="index.html">Portfolio</a>
+    <a href="about.html" class="active">About</a>
+    <a href="#">Shop</a>
+    <a href="https://www.instagram.com/paipai_sesame/" target="_blank">Instagram</a>
+  </nav>
+
+  <div class="about-container">
+    <img src="favicon.png" alt="Pai Pai" class="profile-pic">
+    
+    <h1>Hi, I'm Pai Pai</h1>
+    <p>Welcome to my illustration diary.</p>
+    <p>I love capturing warm everyday moments and whimsical details in my art. I hope these little pieces can bring a touch of healing and joy to your day.</p>
+    
+    <a href="https://www.instagram.com/paipai_sesame/" target="_blank" class="ig-button">Follow @paipai_sesame</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Drawn For You by <a href="https://www.instagram.com/paipai_sesame/" target="_blank">Pai Pai Sesame</a>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
