@@ -60,15 +60,15 @@
       position: relative; 
     }
 
-    /* 左上角返回小箭頭的設計 */
+    /* 左上角返回小箭頭的設計 (放大加粗版) */
     .back-arrow {
-      position: absolute; /* 絕對定位魔法 */
-      top: 30px;
+      position: absolute; 
+      top: 20px; /* 稍微往上調一點點，因為字體變大了 */
       left: 30px;
       text-decoration: none;
       color: #CCC;
-      font-size: 1.5em; /* 讓箭頭稍微大一點點，比較好點 */
-      font-weight: bold;
+      font-size: 2.2em; /* 這裡從 1.5em 放大到 2.2em */
+      font-weight: 900; /* 900 是網頁字體裡最粗的極黑體等級 */
       transition: color 0.3s ease, transform 0.3s ease;
     }
 
