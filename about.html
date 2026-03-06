@@ -6,119 +6,25 @@
   <title>About | Drawn For You</title>
   <link rel="icon" type="image/png" href="未命名的作品.png">
   <style>
-    /* 保持網站一致的奶油底色與字體 */
-    body {
-      background-color: #FAF9F5; 
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      color: #4A4A4A;
-      margin: 0;
-      padding: 0;
-    }
+   body { background-color: #FAF9F5; font-family: 'Helvetica Neue', Arial, sans-serif; color: #4A4A4A; margin: 0; padding: 0; }
+    .top-nav { display: flex; justify-content: center; gap: 40px; padding: 20px; background-color: rgba(250, 249, 245, 0.85); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.03); }
+    .top-nav > a, .dropdown > a { text-decoration: none; color: #888; font-weight: bold; letter-spacing: 1.5px; font-size: 0.95em; transition: color 0.3s; cursor: pointer; }
+    .top-nav a:hover, .top-nav a.active { color: #D4B895; }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content { display: none; position: absolute; background-color: rgba(255, 255, 255, 0.95); min-width: 140px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-radius: 16px; padding: 10px 0; z-index: 200; top: 130%; left: 50%; transform: translateX(-50%); }
+    .dropdown-content a { color: #888; padding: 12px 20px; text-decoration: none; display: block; font-size: 0.9em; text-align: center; transition: all 0.2s ease; font-weight: normal; }
+    .dropdown-content a:hover { background-color: #FAF9F5; color: #D4B895; }
+    .dropdown:hover .dropdown-content { display: block; }
+    @media (max-width: 480px) { .top-nav { gap: 15px; font-size: 0.9em; padding: 15px; } }
 
-    /* 頂部導覽列 */
-    .top-nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 20px;
-      background-color: rgba(250, 249, 245, 0.85); 
-      position: sticky; 
-      top: 0;
-      z-index: 100; 
-      backdrop-filter: blur(8px); 
-      border-bottom: 1px solid rgba(0,0,0,0.03);
-    }
-
-    .top-nav a {
-      text-decoration: none;
-      color: #888;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      font-size: 0.95em;
-      transition: color 0.3s;
-    }
-
-    .top-nav a:hover, .top-nav a.active {
-      color: #D4B895; 
-    }
-
-    @media (max-width: 480px) {
-      .top-nav { gap: 15px; font-size: 0.9em; padding: 15px; }
-    }
-
-    /* 專屬 About 頁面的質感名片設計 */
-    .about-container {
-      max-width: 600px;
-      margin: 60px auto 100px auto;
-      background-color: #FFFFFF;
-      padding: 50px 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      text-align: center;
-      line-height: 1.8;
-      color: #666;
-      /* 關鍵魔法：讓裡面的小箭頭可以對準這個白框的左上角 */
-      position: relative; 
-    }
-
-    /* 左上角返回小箭頭的設計 (放大加粗版) */
-    .back-arrow {
-      position: absolute; 
-      top: 20px; /* 稍微往上調一點點，因為字體變大了 */
-      left: 30px;
-      text-decoration: none;
-      color: #CCC;
-      font-size: 2.2em; /* 這裡從 1.5em 放大到 2.2em */
-      font-weight: 900; /* 900 是網頁字體裡最粗的極黑體等級 */
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    /* 滑鼠移過去時，變成奶茶色，並微微往左移動 */
-    .back-arrow:hover {
-      color: #D4B895;
-      transform: translateX(-5px); 
-    }
-
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 3px solid #FAF9F5;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
-
-    h1 {
-      color: #5D5D5D;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-      font-size: 1.8em;
-    }
-
-    .ig-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 28px;
-      background-color: #D4B895; 
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      letter-spacing: 1px;
-      transition: background-color 0.3s;
-    }
-
-    .ig-button:hover {
-      background-color: #C1A37E; 
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #999;
-      font-size: 0.9em;
-      border-top: 1px solid #EAEAEA;
-    }
+    .about-container { max-width: 600px; margin: 60px auto 100px auto; background-color: #FFFFFF; padding: 50px 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; line-height: 1.8; color: #666; position: relative; }
+    .back-arrow { position: absolute; top: 20px; left: 30px; text-decoration: none; color: #CCC; font-size: 2.2em; font-weight: 900; transition: color 0.3s ease, transform 0.3s ease; }
+    .back-arrow:hover { color: #D4B895; transform: translateX(-5px); }
+    .profile-pic { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #FAF9F5; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+    h1 { color: #5D5D5D; letter-spacing: 2px; margin-bottom: 20px; font-size: 1.8em; }
+    .ig-button { display: inline-block; margin-top: 30px; padding: 12px 28px; background-color: #D4B895; color: white; text-decoration: none; border-radius: 25px; letter-spacing: 1px; transition: background-color 0.3s; }
+    .ig-button:hover { background-color: #C1A37E; }
+    footer { text-align: center; padding: 40px 20px; color: #999; font-size: 0.9em; border-top: 1px solid #EAEAEA; }
     footer a { color: #D4B895; text-decoration: none; }
   </style>
 </head>
