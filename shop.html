@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Drawn For You</title>
+  <link rel="icon" type="image/png" href="未命名的作品.png">
+  <style>
+    body { background-color: #FAF9F5; font-family: 'Helvetica Neue', Arial, sans-serif; color: #4A4A4A; margin: 0; padding: 0; }
+    
+    /* --- 頂部導覽列 --- */
+    .top-nav { display: flex; justify-content: center; gap: 40px; padding: 20px; background-color: rgba(250, 249, 245, 0.85); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.03); }
+    .top-nav > a, .dropdown > a { text-decoration: none; color: #888; font-weight: bold; letter-spacing: 1.5px; font-size: 0.95em; transition: color 0.3s; cursor: pointer; }
+    .top-nav a:hover, .top-nav a.active { color: #D4B895; }
+    
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content { display: none; position: absolute; background-color: rgba(255, 255, 255, 0.95); min-width: 140px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-radius: 16px; padding: 10px 0; z-index: 200; top: 130%; left: 50%; transform: translateX(-50%); }
+    .dropdown-content a { color: #888; padding: 12px 20px; text-decoration: none; display: block; font-size: 0.9em; text-align: center; transition: all 0.2s ease; font-weight: normal; }
+    .dropdown-content a:hover { background-color: #FAF9F5; color: #D4B895; }
+    .dropdown:hover .dropdown-content { display: block; }
+    @media (max-width: 480px) { .top-nav { gap: 15px; font-size: 0.9em; padding: 15px; } }
+
+    /* 商店籌備中卡片設計 */
+    .shop-container { 
+      max-width: 600px; 
+      margin: 80px auto 100px auto; 
+      background-color: #FFFFFF; 
+      padding: 60px 40px; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+      text-align: center; 
+      line-height: 1.8; 
+      color: #666; 
+      position: relative;
+    }
+    
+    .shop-icon {
+      font-size: 4em; /* 用一個可愛的符號代替圖片 */
+      margin-bottom: 10px;
+    }
+
+    h1 { color: #5D5D5D; letter-spacing: 2px; margin-bottom: 20px; font-size: 1.8em; }
+    
+    .back-button { 
+      display: inline-block; 
+      margin-top: 30px; 
+      padding: 12px 28px; 
+      background-color: #FAF9F5; 
+      color: #888; 
+      text-decoration: none; 
+      border-radius: 25px; 
+      letter-spacing: 1px; 
+      transition: all 0.3s; 
+      border: 1px solid #EAEAEA;
+    }
+    .back-button:hover { background-color: #D4B895; color: white; border-color: #D4B895; }
+    
+    footer { text-align: center; padding: 40px 20px; color: #999; font-size: 0.9em; border-top: 1px solid #EAEAEA; }
+    footer a { color: #D4B895; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="dropdown">
+      <a href="index.html">Portfolio ▾</a>
+      <div class="dropdown-content">
+        <a href="#">光遇 (Sky)</a>
+        <a href="#">日常 (Daily)</a>
+        <a href="#">其他 (Other)</a>
+      </div>
+    </div>
+    <a href="about.html">About</a>
+    <!-- 注意看這裡！在 shop.html 裡，active 名牌終於交給 Shop 囉！ -->
+    <a href="shop.html" class="active">Shop</a>
+    <a href="https://www.instagram.com/paipai_sesame/" target="_blank">Instagram</a>
+  </nav>
+
+  <div class="shop-container">
+    <div class="shop-icon">🛒✨</div>
+    <h1>Shop Coming Soon</h1>
+    <p>My online shop is currently in preparation!</p>
+    <p>Stay tuned and follow my Instagram for the latest shop updates! ✨</p>
+    
+    <a href="index.html" class="back-button">Check Portfolio</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Drawn For You by <a href="https://www.instagram.com/paipai_sesame/" target="_blank">Pai Pai Sesame</a>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
