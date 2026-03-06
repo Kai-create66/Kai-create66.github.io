@@ -6,6 +6,43 @@
   <title>Drawn For You | My Art Portfolio</title>
   <link rel="icon" type="image/png" href="未命名的作品.png">
   <style>
+/* 頂部導覽列 (毛玻璃黏性設計) */
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      background-color: rgba(250, 249, 245, 0.85); /* 奶油底色的半透明版 */
+      position: sticky; /* 往下滾動時會黏在最上方 */
+      top: 0;
+      z-index: 100; /* 確保導覽列永遠在圖片的最上層，不會被蓋住 */
+      backdrop-filter: blur(8px); /* 網頁界很流行的高級毛玻璃特效 */
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #888;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      font-size: 0.95em;
+      transition: color 0.3s;
+    }
+
+    /* 滑鼠移過去，或是目前所在的頁面，文字會變成奶茶色 */
+    .top-nav a:hover, .top-nav a.active {
+      color: #D4B895; 
+    }
+
+    /* 手機版導覽列微調，讓按鈕靠近一點以免塞不下 */
+    @media (max-width: 480px) {
+      .top-nav {
+        gap: 15px;
+        font-size: 0.9em;
+        padding: 15px;
+      }
+    }
+    
     /* 這是設定網站整體風格的地方 */
     body {
       background-color: #FAF9F5; /* 微微的奶油紙張色，增加手帳溫度 */
@@ -128,7 +165,19 @@
     <p class="subtitle">Warm everyday moments</p>
   </header>
 
-  <div class="about-section">
+  <body>
+  <nav class="top-nav">
+    <a href="index.html" class="active">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#">Shop</a>
+    <a href="https://www.instagram.com/paipai_sesame/" target="_blank">Instagram</a>
+  </nav>
+  <header>
+    <h1>Drawn For You</h1>
+    <p class="subtitle">Warm everyday moments</p>
+  </header>
+  
+  <div class="about-section" id="about">
     <p>Hi, I'm Pai Pai. Welcome to my illustration diary.</p>
     <p>I love capturing warm everyday moments and whimsical details in my art. I hope these little pieces can bring a touch of healing and joy to your day.</p>
     <a href="https://www.instagram.com/paipai_sesame/" target="_blank" class="ig-button">Follow @paipai_sesame</a>
