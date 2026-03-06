@@ -14,7 +14,7 @@
       padding: 0;
     }
 
-    /* 頂部導覽列 (與首頁一模一樣) */
+    /* 頂部導覽列 */
     .top-nav {
       display: flex;
       justify-content: center;
@@ -56,9 +56,28 @@
       text-align: center;
       line-height: 1.8;
       color: #666;
+      /* 關鍵魔法：讓裡面的小箭頭可以對準這個白框的左上角 */
+      position: relative; 
     }
 
-    /* 如果你未來想放自己的頭像或代表性插畫，可以先保留這個設定 */
+    /* 左上角返回小箭頭的設計 */
+    .back-arrow {
+      position: absolute; /* 絕對定位魔法 */
+      top: 30px;
+      left: 30px;
+      text-decoration: none;
+      color: #CCC;
+      font-size: 1.5em; /* 讓箭頭稍微大一點點，比較好點 */
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* 滑鼠移過去時，變成奶茶色，並微微往左移動 */
+    .back-arrow:hover {
+      color: #D4B895;
+      transform: translateX(-5px); 
+    }
+
     .profile-pic {
       width: 120px;
       height: 120px;
@@ -112,8 +131,10 @@
   </nav>
 
   <div class="about-container">
-    <img src="favicon.png" alt="Pai Pai" class="profile-pic">
     
+    <a href="index.html" class="back-arrow" title="Back to Portfolio">←</a>
+
+    <img src="favicon.png" alt="Pai Pai" class="profile-pic">
     <h1>Hi, I'm Pai Pai</h1>
     <p>Welcome to my illustration diary.</p>
     <p>I love capturing warm everyday moments and whimsical details in my art. I hope these little pieces can bring a touch of healing and joy to your day.</p>
