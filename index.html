@@ -34,6 +34,51 @@
       color: #D4B895; 
     }
 
+    /* --- 下拉選單專用魔法 --- */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* 下拉選單的白色質感小框框 (預設隱藏) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.95);
+      min-width: 140px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-radius: 16px; /* 配合你圖片的圓角 */
+      padding: 10px 0;
+      z-index: 200;
+      top: 130%; /* 讓選單稍微往下浮一點點，比較有呼吸感 */
+      left: 50%;
+      transform: translateX(-50%); /* 讓選單完美置中在按鈕下方 */
+    }
+
+    /* 下拉選單裡面的分類按鈕 */
+    .dropdown-content a {
+      color: #888;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 0.9em;
+      text-align: center;
+      transition: all 0.2s ease;
+      font-weight: normal; /* 讓子選單的字體輕一點，區分層級 */
+    }
+
+    /* 滑鼠移到分類上的變色特效 */
+    .dropdown-content a:hover {
+      background-color: #FAF9F5;
+      color: #D4B895;
+    }
+
+    /* 關鍵魔法：當滑鼠游標觸碰到外層時，顯示選單 */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      /* 如果你想加一點淡入效果，未來可以從這裡升級 */
+    }
+    
     /* 手機版導覽列微調，讓按鈕靠近一點以免塞不下 */
     @media (max-width: 480px) {
       .top-nav {
@@ -162,7 +207,15 @@
 
   <body>
   <nav class="top-nav">
-    <a href="index.html" class="active">Portfolio</a>
+    <div class="dropdown">
+      <a href="index.html" class="active">Portfolio ▾</a>
+      
+      <div class="dropdown-content">
+        <a href="#">光遇 (Sky)</a>
+        <a href="#">日常 (Daily)</a>
+        <a href="#">其他 (Other)</a>
+      </div>
+    </div>
     <a href="about.html">About</a>
     <a href="#">Shop</a>
     <a href="https://www.instagram.com/paipai_sesame/" target="_blank">Instagram</a>
